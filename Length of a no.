@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        long number = sc.nextLong();
+        
+        number = Math.abs(number);
+        
+        int length = String.valueOf(number).length();
+        
+        System.out.println("Length of the number: " + length);
+        
+      
+    }
+}
