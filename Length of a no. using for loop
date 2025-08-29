@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        long number = sc.nextLong();
+
+        number = Math.abs(number);
+
+        int length = 0;
+
+  
+        for (; number > 0; number /= 10) {
+            length++;
+        }
+
+        if (length == 0) {
+            length = 1;
+        }
+
+        System.out.println("Length of the number: " + length);
+    }
+}
