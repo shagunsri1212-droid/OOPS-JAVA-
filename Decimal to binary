@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class DecimalToBinary {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input
+        System.out.print("Enter a decimal number: ");
+        int decimal = sc.nextInt();
+
+        // Array to store binary digits
+        int[] binary = new int[32];  // supports up to 32-bit numbers
+        int index = 0;
+
+        // Conversion using for loop
+        for (int num = decimal; num > 0; num = num / 2) {
+            binary[index] = num % 2;
+            index++;
+        }
+
+        // Print binary in reverse order
+        System.out.print("Binary equivalent: ");
+        for (int i = index - 1; i >= 0; i--) {
+            System.out.print(binary[i]);
+        }
+
+        if (decimal == 0) {
+            System.out.print("0");
+        }
+
+        sc.close();
+    }
+}
